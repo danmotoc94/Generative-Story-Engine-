@@ -1,2 +1,27 @@
-/venv 
-.env 
+# --- Python Basics ---
+__pycache__/
+*.py[cod]
+venv/
+.env
+
+# --- Project Outputs (IGNORE ALL THESE) ---
+outputs/
+outputs/audio_tracks/
+outputs/flux_frames/
+outputs/story_videos/
+outputs/temp_clips/
+outputs/upscaled_videos/
+outputs/image/
+
+# --- Large/Binary Files ---
+*.mp4
+*.wav
+*.png
+*.gif
+*.jpg
+*.zip
+
+# --- Exceptions (Keep these files if they exist) ---
+!assets/demo.gif
+!assets/demo_4k.mp4
+!.gitignore
