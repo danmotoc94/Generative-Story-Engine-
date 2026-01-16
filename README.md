@@ -1,5 +1,3 @@
-Markdown
-
 # 🎬 Generative Story Engine (Luxury Edition)
 
 > **A broadcast-quality AI pipeline for cinematic storytelling.**
@@ -15,7 +13,7 @@ Markdown
 ### 1. The Full Experience (4K Video + Audio)
 
 
-https://github.com/user-attachments/assets/f08df8ff-2c17-4dea-9ab4-fb8f2575226c
+https://github.com/user-attachments/assets/3d801092-57eb-4b52-9a4e-9c07e34fac5a
 
 
 
@@ -31,14 +29,15 @@ It features a custom memory management system (`aggressive_cleanup`) that allows
 
 ### ✨ Key Features
 
-#### 1. High-Fidelity Visuals (Flux 1920p)
+#### 1. Standalone High-Fidelity Visuals (Flux 1920p)
 * **Engine:** `FLUX.1-schnell`
-* **Resolution:** Generates distinct keyframes at **1920x1920p** (Square/IMAX aspect) to maximize texture detail before animation.
-* **Optimization:** Uses sequential CPU offloading to fit within 8GB VRAM limits.
+* **Function:** A dedicated engine for generating "Luxury" grade image sequences or GIFs independent of the video generation pipeline.
+* **Resolution:** Configured for **1920x1920p** (Square/IMAX aspect) to maximize texture detail.
+* **Optimization:** Uses sequential CPU offloading to fit distinct high-res generation within 8GB VRAM.
 
-#### 2. Cinematic Motion & 4K Upscaling
-* **Motion:** `CogVideoX-2b` animates the Flux keyframes into fluid video clips (natively at 720p).
-* **Upscaling:** The pipeline automatically processes the raw 720p output through **Real-ESRGAN (Vulkan)**, quadrupling the resolution to a sharp **4K (2880p/3840p)** ready for broadcast.
+#### 2. Cinematic Video & 4K Upscaling
+* **Motion Engine:** `CogVideoX-2b` generates consistent, directed motion clips from text prompts (native resolution ~720p).
+* **The 4K Pipeline:** Because CogVideo output is lower resolution, this project includes a custom **Real-ESRGAN (Vulkan)** bridge. It automatically takes the raw CogVideo outputs and upscales them 4x to a sharp **4K (2880p/3840p)**, making them ready for broadcast.
 
 #### 3. Intelligent Audio Generator
 A custom `AudioLDM2` implementation (`src/audio_engine.py`) that builds soundtracks intelligently:
@@ -60,13 +59,13 @@ This pipeline was optimized for the following local configuration:
 
 ## 🏗️ Project Structure
 
-
+```text
 Generative-Story-Engine/
 ├── configs/            # YAML Control Centers
 │   ├── flux_config.yaml
 │   └── story_config.yaml
 ├── src/                # Core Engines
-│   ├── flux_engine.py      # Flux Image Generator (1920x1920)
+│   ├── flux_engine.py      # Standalone Flux Generator (1920x1920)
 │   ├── video_engine.py     # CogVideoX Wrapper
 │   ├── audio_engine.py     # AudioLDM2 Dual-Layer Composer
 │   └── utils.py            # Memory Management
@@ -74,7 +73,7 @@ Generative-Story-Engine/
 │   └── upscale_pipeline.py # Real-ESRGAN (Vulkan) Wrapper
 ├── main.py             # CLI Entry Point
 └── requirements.txt    # Dependencies
-
+```
 🚀 Installation
 1. Clone & Environment
 Bash
