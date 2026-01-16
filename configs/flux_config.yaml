@@ -1,0 +1,47 @@
+# configs/flux_config.yaml
+
+video_settings:
+  resolution: 1920        # 1024x1024 is the sweet spot for Flux on RTX 4060
+  fps: 2
+  output_directory: "outputs/flux_frames"
+
+rendering:
+  model_id: "black-forest-labs/FLUX.1-schnell"
+  num_steps: 4             # 4 steps is standard for Flux Schnell
+  guidance_scale: 0.0      # Schnell requires 0.0 guidance
+  base_seed: 42
+  seed_variation: 200       # How much the seed changes per frame
+  memory_optimization: "aggressive"  # "balanced" or "aggressive" (use aggressive for 8GB VRAM)
+  use_xformers: true
+
+transitions:
+  style: "smooth"          # Options: "smooth", "crossfade", "morph"
+  duration_frames: 2       # How long the blend between scenes lasts
+
+output:
+  create_gif: true
+  create_markdown: true    # Creates a cool documentation file for your run
+  add_frame_labels: false   # Adds text info to the bottom of images (useful for debugging)
+  keep_raw_frames: true   # Set to true if you want to keep the raw PNGs
+
+# The AI will travel through these scenes in order
+scenes:
+  - name: "ancient_forest"
+    description: "Dense, dark ancient forest with giant trees, cinematic lighting, sun entering through moss"
+    keywords: ["ancient", "trees", "moss", "dark", "mysterious"]
+    duration_frames: 3
+
+  - name: "forest_stream"
+    description: "Clear stream running through the forest, water reflection, calm and peaceful, serenity"
+    keywords: ["water", "stream", "rocks", "reflections", "clear"]
+    duration_frames: 3
+
+  - name: "mountain_view"
+    description: "View from forest clearing to mountains, epic scale, feeling of ultima freedom, rebecoming one with nature"
+    keywords: ["mountains", "panoramic", "mist", "scale", "distance", "freedom"]
+    duration_frames: 3
+
+  - name: "starry_night"
+    description: "Vast night sky above the mountains, milky way galaxy visible, deep cosmic colors, bioluminescent glow on rocks"
+    keywords: ["stars", "galaxy", "night", "cosmic", "purple", "cinematic"]
+    duration_frames: 3

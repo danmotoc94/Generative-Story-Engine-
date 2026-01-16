@@ -1,0 +1,36 @@
+model_settings:
+  model_id: "THUDM/CogVideoX-2b"
+  width: 720
+  height: 480
+  steps: 50
+  guidance: 6.0       # 6.0 is the sweet spot for CogVideo visibility
+  fps: 8
+  num_frames: 49      # 6 Seconds
+  output_filename: "story_output_NATURE_BRIGHT.mp4"
+
+story_settings:
+  # FORCE BRIGHTNESS here:
+  base_style: "National Geographic style, golden hour lighting, bright, sunlit, crystal clear, 8k resolution, photorealistic, vivid colors"
+  fade_duration: 1.0
+  seed_mode: "random"
+
+prompts:
+  # COMPLEXITY TEST 1: FLUID DYNAMICS & LIGHT
+  # We want to see if the water splashes look real or like slime. 
+  # "Sunbeams" forces the model to render light rays.
+  - "Drone shot flying through a majestic waterfall in a bright tropical jungle, rainbows in the mist, sparkling clear blue water, intense sunlight breaking through trees"
+  
+  # COMPLEXITY TEST 2: TEXTURE & MACRO DETAILS
+  # "Iridescent scales" is a nightmare for AI to render. If it nails this, it's powerful.
+  -     prompt: "Drone shot slowly gliding over a pristine white sand beach, crystal clear turquoise waves gently rolling onto shore, shafts of sunlight illuminating the shallow water, shallow depth of field"
+
+negative_prompt: "darkness, shadows, night, dim, blurry, low quality, distortion, morphing, coral reef, underwater, deep ocean"
+
+# ... existing story_settings ...
+
+audio_settings:
+  # The global mood. AudioLDM2 is great at musical genres.
+  theme_prompt: "Cinematic nature documentary soundtrack, orchestral, emotional, Hans Zimmer style, immersive ambient music"
+  theme_volume: 0.4  # Background music volume (0.0 to 1.0)
+  sfx_volume: 1.0    # Sound effects volume
+  negative_prompt: "low quality, average quality, noise, distortion, techno, electronic, vocals, speech, camera noise"
