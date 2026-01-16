@@ -19,7 +19,7 @@ https://github.com/user-attachments/assets/35cbfa44-806d-49f0-a202-33b1f083a906
 
 
 
-### 2. Flux + CogVideoX Motion
+### 2. Flux 
 ![Demo Animation](assets/demo.gif)
 
 ---
