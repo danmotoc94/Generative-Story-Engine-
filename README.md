@@ -1,3 +1,5 @@
+Markdown
+
 # 🎬 Generative Story Engine (Luxury Edition)
 
 > **A broadcast-quality AI pipeline for cinematic storytelling.**
@@ -13,7 +15,7 @@
 ### 1. The Full Experience (4K Video + Audio)
 
 
-https://github.com/user-attachments/assets/3d801092-57eb-4b52-9a4e-9c07e34fac5a
+https://github.com/user-attachments/assets/35cbfa44-806d-49f0-a202-33b1f083a906
 
 
 
@@ -59,7 +61,7 @@ This pipeline was optimized for the following local configuration:
 
 ## 🏗️ Project Structure
 
-```text
+```
 Generative-Story-Engine/
 ├── configs/            # YAML Control Centers
 │   ├── flux_config.yaml
@@ -68,16 +70,17 @@ Generative-Story-Engine/
 │   ├── flux_engine.py      # Standalone Flux Generator (1920x1920)
 │   ├── video_engine.py     # CogVideoX Wrapper
 │   ├── audio_engine.py     # AudioLDM2 Dual-Layer Composer
-│   └── memory.py            # Memory Management
+│   └── memory.py           # Memory Management
 ├── tools/              # Post-Processing
 │   └── upscale_pipeline.py # Real-ESRGAN (Vulkan) Wrapper
 ├── main.py             # CLI Entry Point
 └── requirements.txt    # Dependencies
 ```
 🚀 Installation
-**1. Clone & Environment**
+1. Clone & Environment
 
-git clone [https://github.com/danmotoc94/Generative-Story-Engine-.git](https://github.com/danmotoc94/Generative-Story-Engine-.git)
+```
+git clone https://github.com/danmotoc94/Generative-Story-Engine-.git
 cd Generative-Story-Engine-
 
 python -m venv venv
@@ -87,36 +90,40 @@ venv\Scripts\activate
 
 # Linux/Mac
 source venv/bin/activate
+```
+2. Install Dependencies
 
-**2. Install Dependencies**
-
+```
 pip install -r requirements.txt
+```
 
-**3. Usage**
+3. Usage
 
-**Run the central hub to access all engines:**
+Run the central hub to access all engines:
 
-
+```
 python main.py
+```
+    
+Option 1: Generate Base Images (Flux 1920p)
 
-    Option 1: Generate Base Images (Flux 1920p)
+Option 2: Animate Scenes (CogVideoX)
 
-    Option 2: Animate Scenes (CogVideoX)
+Option 3: Upscale to 4K
 
-    Option 3: Upscale to 4K
+Option 4: Generate & Merge Audio
 
-    Option 4: Generate & Merge Audio
+⚙️ Configuration
 
-## ⚙️ Configuration
+Video Settings (configs/story_config.yaml)
 
-**Video Settings** (`configs/story_config.yaml`)
 ```
 model_settings:
   model_id: "THUDM/CogVideoX-2b"
   guidance: 6.0       # Higher = follows prompt strictly
   num_frames: 49      # Approx 6 seconds
 ```
-**Flux Settings** (`configs/flux_config.yaml`)
+Flux Settings (configs/flux_config.yaml)
 ```
 video_settings:
   resolution: 1920    # 1920x1920 High-Res Output
@@ -125,3 +132,4 @@ rendering:
   model_id: "black-forest-labs/FLUX.1-schnell"
   memory_optimization: "aggressive" # Essential for 8GB cards
 ```
+Author: Dan Motoc
