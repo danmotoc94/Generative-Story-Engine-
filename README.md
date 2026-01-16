@@ -11,7 +11,11 @@
 ## 🎥 Demos & Results
 
 ### 1. The Full Experience (4K Video + Audio)
-> **[Upload your MP4 to GitHub to see the player here]**
+
+
+Uploading demo_small.mp4…
+
+
 
 ### 2. Flux + CogVideoX Motion
 ![Demo Animation](assets/demo.gif)
