@@ -13,8 +13,7 @@
 ### 1. The Full Experience (4K Video + Audio)
 
 
-Uploading demo_small.mp4…
-
+https://github.com/user-attachments/assets/628064c6-c9fa-4278-9a3c-355788175071
 
 
 ### 2. Flux + CogVideoX Motion
