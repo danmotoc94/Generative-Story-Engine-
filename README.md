@@ -104,7 +104,7 @@ Run the central hub to access all engines:
 ```
 python main.py
 ```
-    
+```    
 Option 1: Generate Base Images (Flux 1920p)
 
 Option 2: Animate Scenes (CogVideoX)
@@ -112,7 +112,7 @@ Option 2: Animate Scenes (CogVideoX)
 Option 3: Upscale to 4K
 
 Option 4: Generate & Merge Audio
-
+```
 ⚙️ Configuration
 
 Video Settings (configs/story_config.yaml)
