@@ -37,7 +37,6 @@ This pipeline was optimized for the following local configuration:
 
 ## 🏗️ Project Structure
 
-```text
 Generative-Story-Engine/
 ├── configs/            # YAML Control Centers
 │   ├── flux_config.yaml
