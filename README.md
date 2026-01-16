@@ -37,7 +37,7 @@ This pipeline was optimized for the following local configuration:
 
 ## 🏗️ Project Structure
 
-
+```text
 Generative-Story-Engine/
 ├── configs/            # YAML Control Centers
 │   ├── flux_config.yaml
@@ -54,7 +54,8 @@ Generative-Story-Engine/
 
 🚀 Installation
 1. Clone & Environment
-2. 
+Bash
+
 git clone [https://github.com/danmotoc94/Generative-Story-Engine-.git](https://github.com/danmotoc94/Generative-Story-Engine-.git)
 cd Generative-Story-Engine-
 
@@ -67,12 +68,14 @@ venv\Scripts\activate
 source venv/bin/activate
 
 2. Install Dependencies
+Bash
 
 pip install -r requirements.txt
 
 3. Usage
 
 Run the central hub to access all engines:
+Bash
 
 python main.py
 
@@ -103,4 +106,4 @@ rendering:
 transitions:
   style: "smooth"
 
-Author: Dan Motoc 
+Author: Dan Motoc
