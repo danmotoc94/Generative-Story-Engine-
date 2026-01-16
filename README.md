@@ -68,7 +68,7 @@ Generative-Story-Engine/
 │   ├── flux_engine.py      # Standalone Flux Generator (1920x1920)
 │   ├── video_engine.py     # CogVideoX Wrapper
 │   ├── audio_engine.py     # AudioLDM2 Dual-Layer Composer
-│   └── utils.py            # Memory Management
+│   └── memory.py            # Memory Management
 ├── tools/              # Post-Processing
 │   └── upscale_pipeline.py # Real-ESRGAN (Vulkan) Wrapper
 ├── main.py             # CLI Entry Point
