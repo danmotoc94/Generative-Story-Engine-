@@ -75,8 +75,7 @@ Generative-Story-Engine/
 └── requirements.txt    # Dependencies
 ```
 🚀 Installation
-1. Clone & Environment
-Bash
+**1. Clone & Environment**
 
 git clone [https://github.com/danmotoc94/Generative-Story-Engine-.git](https://github.com/danmotoc94/Generative-Story-Engine-.git)
 cd Generative-Story-Engine-
@@ -89,15 +88,14 @@ venv\Scripts\activate
 # Linux/Mac
 source venv/bin/activate
 
-2. Install Dependencies
-Bash
+**2. Install Dependencies**
 
 pip install -r requirements.txt
 
-3. Usage
+**3. Usage**
 
-Run the central hub to access all engines:
-Bash
+**Run the central hub to access all engines:**
+
 
 python main.py
 
@@ -109,24 +107,21 @@ python main.py
 
     Option 4: Generate & Merge Audio
 
-⚙️ Configuration
+## ⚙️ Configuration
 
-Video Settings (configs/story_config.yaml)
-YAML
-
+**Video Settings** (`configs/story_config.yaml`)
+```
 model_settings:
   model_id: "THUDM/CogVideoX-2b"
-  guidance: 6.0       
+  guidance: 6.0       # Higher = follows prompt strictly
   num_frames: 49      # Approx 6 seconds
-
-Flux Settings (configs/flux_config.yaml)
-YAML
-
+```
+**Flux Settings** (`configs/flux_config.yaml`)
+```
 video_settings:
   resolution: 1920    # 1920x1920 High-Res Output
 
 rendering:
   model_id: "black-forest-labs/FLUX.1-schnell"
-  memory_optimization: "aggressive" 
-
-Author: Romanian Reviewer
+  memory_optimization: "aggressive" # Essential for 8GB cards
+```
