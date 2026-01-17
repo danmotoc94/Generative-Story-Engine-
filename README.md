@@ -97,9 +97,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-3. Usage
-
-Run the central hub to access all engines:
+3. Usage - run the central hub to access all engines:
 
 ```
 python main.py
