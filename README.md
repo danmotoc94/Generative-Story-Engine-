@@ -1,4 +1,3 @@
-Markdown
 
 # 🎬 Generative Story Engine (Luxury Edition)
 
